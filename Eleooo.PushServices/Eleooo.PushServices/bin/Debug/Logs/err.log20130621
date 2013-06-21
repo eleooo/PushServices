@@ -1,0 +1,300 @@
+2013-06-21 17:02:52,217 [14644] ERROR EleWebPushServer-45653674 - No SubProtocol selected! This session cannot process any message!
+2013-06-21 17:03:46,182 [14644] ERROR EleWebPushServer-45653674 - No SubProtocol selected! This session cannot process any message!
+2013-06-21 17:09:02,408 [17512] ERROR EleWebPushServer-37121646 - No SubProtocol selected! This session cannot process any message!
+2013-06-21 17:09:41,906 [16172] ERROR EleWebPushServer-37121646 - SubSonic.SqlQueryException: 无法打开登录所请求的数据库 "eleooo"。登录失败。
+用户 'GSST025\admin' 登录失败。 ---> System.Data.SqlClient.SqlException: 无法打开登录所请求的数据库 "eleooo"。登录失败。
+用户 'GSST025\admin' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 SubSonic.SqlDataProvider.CreateConnection(String newConnectionString)
+   在 SubSonic.SqlDataProvider.CreateConnection()
+   在 SubSonic.AutomaticConnectionScope..ctor(DataProvider provider)
+   在 SubSonic.SqlDataProvider.GetReader(QueryCommand qry)
+   在 SubSonic.DataProvider.GetListTypedResult[T](QueryCommand cmd)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 SubSonic.DataProvider.GetListTypedResult[T](QueryCommand cmd)
+   在 SubSonic.DataProvider.GetTypedResult[T](QueryCommand cmd)
+   在 SubSonic.DataService.ExecuteTypedResult[T](QueryCommand cmd)
+   在 SubSonic.Query.ExecuteSingle[T]()
+   在 SubSonic.ReadOnlyRecord`1.FetchByIdInternal(Object keyValue)
+   在 SubSonic.ReadOnlyRecord`1.FetchByID(Int32 keyValue)
+   在 Eleooo.PushServices.EleWebSession.get_User() 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebSession.cs:行号 23
+   在 Eleooo.PushServices.EleWebSession.get_Company() 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebSession.cs:行号 35
+   在 Eleooo.PushServices.EleWebPushServer.<PushTimerProcess>b__0(EleWebSession session) 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebPushServer.cs:行号 30
+   在 System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   在 System.Linq.Lookup`2.Create[TSource](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   在 System.Linq.GroupedEnumerable`3.GetEnumerator()
+   在 Eleooo.PushServices.EleWebPushServer.PushTimerProcess(Object state) 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebPushServer.cs:行号 32
+2013-06-21 17:09:47,148 [16172] ERROR EleWebPushServer-37121646 - SubSonic.SqlQueryException: 已成功与服务器建立连接，但是在登录过程中发生错误。 (provider: Shared Memory Provider, error: 0 - 管道的另一端上无任何进程。) ---> System.Data.SqlClient.SqlException: 已成功与服务器建立连接，但是在登录过程中发生错误。 (provider: Shared Memory Provider, error: 0 - 管道的另一端上无任何进程。)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadSni(DbAsyncResult asyncResult, TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.TdsParserStateObject.ReadNetworkPacket()
+   在 System.Data.SqlClient.TdsParserStateObject.ReadBuffer()
+   在 System.Data.SqlClient.TdsParserStateObject.ReadByte()
+   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 SubSonic.SqlDataProvider.CreateConnection(String newConnectionString)
+   在 SubSonic.SqlDataProvider.CreateConnection()
+   在 SubSonic.AutomaticConnectionScope..ctor(DataProvider provider)
+   在 SubSonic.SqlDataProvider.GetReader(QueryCommand qry)
+   在 SubSonic.DataProvider.GetListTypedResult[T](QueryCommand cmd)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 SubSonic.DataProvider.GetListTypedResult[T](QueryCommand cmd)
+   在 SubSonic.DataProvider.GetTypedResult[T](QueryCommand cmd)
+   在 SubSonic.DataService.ExecuteTypedResult[T](QueryCommand cmd)
+   在 SubSonic.Query.ExecuteSingle[T]()
+   在 SubSonic.ReadOnlyRecord`1.FetchByIdInternal(Object keyValue)
+   在 SubSonic.ReadOnlyRecord`1.FetchByID(Int32 keyValue)
+   在 Eleooo.PushServices.EleWebSession.get_User() 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebSession.cs:行号 23
+   在 Eleooo.PushServices.EleWebSession.get_Company() 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebSession.cs:行号 35
+   在 Eleooo.PushServices.EleWebPushServer.<PushTimerProcess>b__0(EleWebSession session) 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebPushServer.cs:行号 30
+   在 System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   在 System.Linq.Lookup`2.Create[TSource](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   在 System.Linq.GroupedEnumerable`3.GetEnumerator()
+   在 Eleooo.PushServices.EleWebPushServer.PushTimerProcess(Object state) 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebPushServer.cs:行号 32
+2013-06-21 17:10:49,375 [17104] ERROR EleWebPushServer-37121646 - SubSonic.SqlQueryException: 无法打开登录所请求的数据库 "eleooo"。登录失败。
+用户 'GSST025\admin' 登录失败。 ---> System.Data.SqlClient.SqlException: 无法打开登录所请求的数据库 "eleooo"。登录失败。
+用户 'GSST025\admin' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 SubSonic.SqlDataProvider.CreateConnection(String newConnectionString)
+   在 SubSonic.SqlDataProvider.CreateConnection()
+   在 SubSonic.AutomaticConnectionScope..ctor(DataProvider provider)
+   在 SubSonic.SqlDataProvider.GetReader(QueryCommand qry)
+   在 SubSonic.DataProvider.GetListTypedResult[T](QueryCommand cmd)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 SubSonic.DataProvider.GetListTypedResult[T](QueryCommand cmd)
+   在 SubSonic.DataProvider.GetTypedResult[T](QueryCommand cmd)
+   在 SubSonic.DataService.ExecuteTypedResult[T](QueryCommand cmd)
+   在 SubSonic.Query.ExecuteSingle[T]()
+   在 SubSonic.ReadOnlyRecord`1.FetchByIdInternal(Object keyValue)
+   在 SubSonic.ReadOnlyRecord`1.FetchByID(Int32 keyValue)
+   在 Eleooo.PushServices.EleWebSession.get_User() 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebSession.cs:行号 23
+   在 Eleooo.PushServices.EleWebSession.get_Company() 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebSession.cs:行号 35
+   在 Eleooo.PushServices.EleWebPushServer.<PushTimerProcess>b__0(EleWebSession session) 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebPushServer.cs:行号 30
+   在 System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   在 System.Linq.Lookup`2.Create[TSource](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   在 System.Linq.GroupedEnumerable`3.GetEnumerator()
+   在 Eleooo.PushServices.EleWebPushServer.PushTimerProcess(Object state) 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebPushServer.cs:行号 32
+2013-06-21 17:10:54,472 [10280] ERROR EleWebPushServer-37121646 - SubSonic.SqlQueryException: 无法打开登录所请求的数据库 "eleooo"。登录失败。
+用户 'GSST025\admin' 登录失败。 ---> System.Data.SqlClient.SqlException: 无法打开登录所请求的数据库 "eleooo"。登录失败。
+用户 'GSST025\admin' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 SubSonic.SqlDataProvider.CreateConnection(String newConnectionString)
+   在 SubSonic.SqlDataProvider.CreateConnection()
+   在 SubSonic.AutomaticConnectionScope..ctor(DataProvider provider)
+   在 SubSonic.SqlDataProvider.GetReader(QueryCommand qry)
+   在 SubSonic.DataProvider.GetListTypedResult[T](QueryCommand cmd)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 SubSonic.DataProvider.GetListTypedResult[T](QueryCommand cmd)
+   在 SubSonic.DataProvider.GetTypedResult[T](QueryCommand cmd)
+   在 SubSonic.DataService.ExecuteTypedResult[T](QueryCommand cmd)
+   在 SubSonic.Query.ExecuteSingle[T]()
+   在 SubSonic.ReadOnlyRecord`1.FetchByIdInternal(Object keyValue)
+   在 SubSonic.ReadOnlyRecord`1.FetchByID(Int32 keyValue)
+   在 Eleooo.PushServices.EleWebSession.get_User() 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebSession.cs:行号 23
+   在 Eleooo.PushServices.EleWebSession.get_Company() 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebSession.cs:行号 35
+   在 Eleooo.PushServices.EleWebPushServer.<PushTimerProcess>b__0(EleWebSession session) 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebPushServer.cs:行号 30
+   在 System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   在 System.Linq.Lookup`2.Create[TSource](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   在 System.Linq.GroupedEnumerable`3.GetEnumerator()
+   在 Eleooo.PushServices.EleWebPushServer.PushTimerProcess(Object state) 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebPushServer.cs:行号 32
+2013-06-21 17:10:59,517 [17104] ERROR EleWebPushServer-37121646 - SubSonic.SqlQueryException: 无法打开登录所请求的数据库 "eleooo"。登录失败。
+用户 'GSST025\admin' 登录失败。 ---> System.Data.SqlClient.SqlException: 无法打开登录所请求的数据库 "eleooo"。登录失败。
+用户 'GSST025\admin' 登录失败。
+   在 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 SubSonic.SqlDataProvider.CreateConnection(String newConnectionString)
+   在 SubSonic.SqlDataProvider.CreateConnection()
+   在 SubSonic.AutomaticConnectionScope..ctor(DataProvider provider)
+   在 SubSonic.SqlDataProvider.GetReader(QueryCommand qry)
+   在 SubSonic.DataProvider.GetListTypedResult[T](QueryCommand cmd)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 SubSonic.DataProvider.GetListTypedResult[T](QueryCommand cmd)
+   在 SubSonic.DataProvider.GetTypedResult[T](QueryCommand cmd)
+   在 SubSonic.DataService.ExecuteTypedResult[T](QueryCommand cmd)
+   在 SubSonic.Query.ExecuteSingle[T]()
+   在 SubSonic.ReadOnlyRecord`1.FetchByIdInternal(Object keyValue)
+   在 SubSonic.ReadOnlyRecord`1.FetchByID(Int32 keyValue)
+   在 Eleooo.PushServices.EleWebSession.get_User() 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebSession.cs:行号 23
+   在 Eleooo.PushServices.EleWebSession.get_Company() 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebSession.cs:行号 35
+   在 Eleooo.PushServices.EleWebPushServer.<PushTimerProcess>b__0(EleWebSession session) 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebPushServer.cs:行号 30
+   在 System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   在 System.Linq.Lookup`2.Create[TSource](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   在 System.Linq.GroupedEnumerable`3.GetEnumerator()
+   在 Eleooo.PushServices.EleWebPushServer.PushTimerProcess(Object state) 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebPushServer.cs:行号 32
+2013-06-21 17:11:04,630 [11200] ERROR EleWebPushServer-37121646 - SubSonic.SqlQueryException: 无法打开登录所请求的数据库 "eleooo"。登录失败。
+用户 'GSST025\admin' 登录失败。 ---> System.Data.SqlClient.SqlException: 无法打开登录所请求的数据库 "eleooo"。登录失败。
+用户 'GSST025\admin' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   在 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   在 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 SubSonic.SqlDataProvider.CreateConnection(String newConnectionString)
+   在 SubSonic.SqlDataProvider.CreateConnection()
+   在 SubSonic.AutomaticConnectionScope..ctor(DataProvider provider)
+   在 SubSonic.SqlDataProvider.GetReader(QueryCommand qry)
+   在 SubSonic.DataProvider.GetListTypedResult[T](QueryCommand cmd)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 SubSonic.DataProvider.GetListTypedResult[T](QueryCommand cmd)
+   在 SubSonic.DataProvider.GetTypedResult[T](QueryCommand cmd)
+   在 SubSonic.DataService.ExecuteTypedResult[T](QueryCommand cmd)
+   在 SubSonic.Query.ExecuteSingle[T]()
+   在 SubSonic.ReadOnlyRecord`1.FetchByIdInternal(Object keyValue)
+   在 SubSonic.ReadOnlyRecord`1.FetchByID(Int32 keyValue)
+   在 Eleooo.PushServices.EleWebSession.get_User() 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebSession.cs:行号 23
+   在 Eleooo.PushServices.EleWebSession.get_Company() 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebSession.cs:行号 35
+   在 Eleooo.PushServices.EleWebPushServer.<PushTimerProcess>b__0(EleWebSession session) 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebPushServer.cs:行号 30
+   在 System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   在 System.Linq.Lookup`2.Create[TSource](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   在 System.Linq.GroupedEnumerable`3.GetEnumerator()
+   在 Eleooo.PushServices.EleWebPushServer.PushTimerProcess(Object state) 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebPushServer.cs:行号 32
+2013-06-21 17:11:09,657 [10280] ERROR EleWebPushServer-37121646 - SubSonic.SqlQueryException: 无法打开登录所请求的数据库 "eleooo"。登录失败。
+用户 'GSST025\admin' 登录失败。 ---> System.Data.SqlClient.SqlException: 无法打开登录所请求的数据库 "eleooo"。登录失败。
+用户 'GSST025\admin' 登录失败。
+   在 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 SubSonic.SqlDataProvider.CreateConnection(String newConnectionString)
+   在 SubSonic.SqlDataProvider.CreateConnection()
+   在 SubSonic.AutomaticConnectionScope..ctor(DataProvider provider)
+   在 SubSonic.SqlDataProvider.GetReader(QueryCommand qry)
+   在 SubSonic.DataProvider.GetListTypedResult[T](QueryCommand cmd)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 SubSonic.DataProvider.GetListTypedResult[T](QueryCommand cmd)
+   在 SubSonic.DataProvider.GetTypedResult[T](QueryCommand cmd)
+   在 SubSonic.DataService.ExecuteTypedResult[T](QueryCommand cmd)
+   在 SubSonic.Query.ExecuteSingle[T]()
+   在 SubSonic.ReadOnlyRecord`1.FetchByIdInternal(Object keyValue)
+   在 SubSonic.ReadOnlyRecord`1.FetchByID(Int32 keyValue)
+   在 Eleooo.PushServices.EleWebSession.get_User() 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebSession.cs:行号 23
+   在 Eleooo.PushServices.EleWebSession.get_Company() 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebSession.cs:行号 35
+   在 Eleooo.PushServices.EleWebPushServer.<PushTimerProcess>b__0(EleWebSession session) 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebPushServer.cs:行号 30
+   在 System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   在 System.Linq.Lookup`2.Create[TSource](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   在 System.Linq.GroupedEnumerable`3.GetEnumerator()
+   在 Eleooo.PushServices.EleWebPushServer.PushTimerProcess(Object state) 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebPushServer.cs:行号 32
+2013-06-21 17:11:14,698 [10280] ERROR EleWebPushServer-37121646 - SubSonic.SqlQueryException: 无法打开登录所请求的数据库 "eleooo"。登录失败。
+用户 'GSST025\admin' 登录失败。 ---> System.Data.SqlClient.SqlException: 无法打开登录所请求的数据库 "eleooo"。登录失败。
+用户 'GSST025\admin' 登录失败。
+   在 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 SubSonic.SqlDataProvider.CreateConnection(String newConnectionString)
+   在 SubSonic.SqlDataProvider.CreateConnection()
+   在 SubSonic.AutomaticConnectionScope..ctor(DataProvider provider)
+   在 SubSonic.SqlDataProvider.GetReader(QueryCommand qry)
+   在 SubSonic.DataProvider.GetListTypedResult[T](QueryCommand cmd)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 SubSonic.DataProvider.GetListTypedResult[T](QueryCommand cmd)
+   在 SubSonic.DataProvider.GetTypedResult[T](QueryCommand cmd)
+   在 SubSonic.DataService.ExecuteTypedResult[T](QueryCommand cmd)
+   在 SubSonic.Query.ExecuteSingle[T]()
+   在 SubSonic.ReadOnlyRecord`1.FetchByIdInternal(Object keyValue)
+   在 SubSonic.ReadOnlyRecord`1.FetchByID(Int32 keyValue)
+   在 Eleooo.PushServices.EleWebSession.get_User() 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebSession.cs:行号 23
+   在 Eleooo.PushServices.EleWebSession.get_Company() 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebSession.cs:行号 35
+   在 Eleooo.PushServices.EleWebPushServer.<PushTimerProcess>b__0(EleWebSession session) 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebPushServer.cs:行号 30
+   在 System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   在 System.Linq.Lookup`2.Create[TSource](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   在 System.Linq.GroupedEnumerable`3.GetEnumerator()
+   在 Eleooo.PushServices.EleWebPushServer.PushTimerProcess(Object state) 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebPushServer.cs:行号 32
+2013-06-21 17:11:19,733 [10280] ERROR EleWebPushServer-37121646 - SubSonic.SqlQueryException: 无法打开登录所请求的数据库 "eleooo"。登录失败。
+用户 'GSST025\admin' 登录失败。 ---> System.Data.SqlClient.SqlException: 无法打开登录所请求的数据库 "eleooo"。登录失败。
+用户 'GSST025\admin' 登录失败。
+   在 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   在 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   在 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 SubSonic.SqlDataProvider.CreateConnection(String newConnectionString)
+   在 SubSonic.SqlDataProvider.CreateConnection()
+   在 SubSonic.AutomaticConnectionScope..ctor(DataProvider provider)
+   在 SubSonic.SqlDataProvider.GetReader(QueryCommand qry)
+   在 SubSonic.DataProvider.GetListTypedResult[T](QueryCommand cmd)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 SubSonic.DataProvider.GetListTypedResult[T](QueryCommand cmd)
+   在 SubSonic.DataProvider.GetTypedResult[T](QueryCommand cmd)
+   在 SubSonic.DataService.ExecuteTypedResult[T](QueryCommand cmd)
+   在 SubSonic.Query.ExecuteSingle[T]()
+   在 SubSonic.ReadOnlyRecord`1.FetchByIdInternal(Object keyValue)
+   在 SubSonic.ReadOnlyRecord`1.FetchByID(Int32 keyValue)
+   在 Eleooo.PushServices.EleWebSession.get_User() 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebSession.cs:行号 23
+   在 Eleooo.PushServices.EleWebSession.get_Company() 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebSession.cs:行号 35
+   在 Eleooo.PushServices.EleWebPushServer.<PushTimerProcess>b__0(EleWebSession session) 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebPushServer.cs:行号 30
+   在 System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   在 System.Linq.Lookup`2.Create[TSource](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   在 System.Linq.GroupedEnumerable`3.GetEnumerator()
+   在 Eleooo.PushServices.EleWebPushServer.PushTimerProcess(Object state) 位置 D:\elePusher\Eleooo.PushServices\Eleooo.PushServices\EleWebPushServer.cs:行号 32

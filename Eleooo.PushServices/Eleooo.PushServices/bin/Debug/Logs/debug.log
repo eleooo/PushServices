@@ -1,24 +1,33 @@
-2013-06-21 17:00:28,148 [17788] DEBUG EleWebPushServer-62476613 - SubProtocol Basic found the commands below:
+2013-06-22 01:54:24,658 [2380] DEBUG EleWebPushServer-46104728 - SubProtocol Basic found the commands below:
 Login
+Log
 
-2013-06-21 17:00:28,195 [17788] DEBUG EleWebPushServer-62476613 - Listener (0.0.0.0:8081) was started
-2013-06-21 17:02:04,026 [17832] DEBUG EleWebPushServer-45653674 - SubProtocol Basic found the commands below:
+2013-06-22 01:54:24,815 [2380] DEBUG EleWebPushServer-46104728 - Listener (0.0.0.0:8080) was started
+2013-06-22 02:01:04,139 [2164] DEBUG EleWebPushServer-46104728 - SubProtocol Basic found the commands below:
 Login
+Log
 
-2013-06-21 17:02:04,073 [17832] DEBUG EleWebPushServer-45653674 - Listener (0.0.0.0:8080) was started
-2013-06-21 17:06:13,531 [16672] DEBUG EleWebPushServer-33156464 - SubProtocol Basic found the commands below:
+2013-06-22 02:01:04,179 [2164] DEBUG EleWebPushServer-46104728 - Listener (0.0.0.0:8080) was started
+2013-06-22 02:08:13,553 [2164] DEBUG EleWebPushServer-46104728 - Listener (0.0.0.0:8080) was stoppped
+2013-06-22 02:19:03,711 [3836] DEBUG EleWebPushServer-46104728 - SubProtocol Basic found the commands below:
 Login
+Log
 
-2013-06-21 17:06:13,577 [16672] DEBUG EleWebPushServer-33156464 - Listener (0.0.0.0:8080) was started
-2013-06-21 17:07:10,275 [17728] DEBUG EleWebPushServer-37121646 - SubProtocol Basic found the commands below:
+2013-06-22 02:19:03,750 [3836] DEBUG EleWebPushServer-46104728 - Listener (0.0.0.0:8080) was started
+2013-06-22 02:49:50,797 [2876] DEBUG EleWebPushServer-46104728 - SubProtocol Basic found the commands below:
 Login
+Log
 
-2013-06-21 17:07:10,321 [17728] DEBUG EleWebPushServer-37121646 - Listener (0.0.0.0:8080) was started
-2013-06-21 17:08:44,221 [16652] DEBUG EleWebPushServer-37121646 - SubProtocol Basic found the commands below:
+2013-06-22 02:49:50,840 [2876] DEBUG EleWebPushServer-46104728 - Listener (0.0.0.0:8080) was started
+2013-06-22 02:50:36,925 [2876] DEBUG EleWebPushServer-46104728 - Listener (0.0.0.0:8080) was stoppped
+2013-06-22 02:52:36,738 [3560] DEBUG EleWebPushServer-46104728 - SubProtocol Basic found the commands below:
 Login
+Log
 
-2013-06-21 17:08:44,267 [16652] DEBUG EleWebPushServer-37121646 - Listener (0.0.0.0:8080) was started
-2013-06-21 17:10:33,850 [18164] DEBUG EleWebPushServer-37121646 - SubProtocol Basic found the commands below:
+2013-06-22 02:52:36,778 [3560] DEBUG EleWebPushServer-46104728 - Listener (0.0.0.0:8080) was started
+2013-06-22 03:00:42,346 [3408] DEBUG EleWebPushServer-46104728 - SubProtocol Basic found the commands below:
 Login
+Log
 
-2013-06-21 17:10:33,896 [18164] DEBUG EleWebPushServer-37121646 - Listener (0.0.0.0:8080) was started
+2013-06-22 03:00:42,385 [3408] DEBUG EleWebPushServer-46104728 - Listener (0.0.0.0:8080) was started
+2013-06-22 03:16:33,848 [3408] DEBUG EleWebPushServer-46104728 - Listener (0.0.0.0:8080) was stoppped

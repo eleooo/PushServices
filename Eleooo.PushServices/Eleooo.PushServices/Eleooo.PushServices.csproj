@@ -85,7 +85,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SubCommand\CommandResult.cs" />
+    <Compile Include="SubCommand\Log.cs" />
     <Compile Include="SubCommand\Login.cs" />
+    <Compile Include="OrderPushResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

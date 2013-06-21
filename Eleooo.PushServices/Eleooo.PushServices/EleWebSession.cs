@@ -11,7 +11,10 @@ namespace Eleooo.PushServices
 {
     public class EleWebSession : WebSocketSession<EleWebSession>
     {
-        internal FormsAuthenticationTicket Ticket { get; set; }
+        public int UserID { get; set; }
+        public int CompanyId { get; set; }
+        public SubSystem SubSys { get; set; }
+        public LoginSystem LoginSys { get; set; }
 
         private SysMember _user;
         public SysMember User
@@ -20,7 +23,7 @@ namespace Eleooo.PushServices
             {
                 if (_user == null)
                 {
-                    _user = Ticket != null ? SysMember.FetchByID(Utilities.ToInt(Ticket.Name)) : _user;
+                    _user = SysMember.FetchByID(UserID);
                 }
                 return _user;
             }
@@ -32,11 +35,12 @@ namespace Eleooo.PushServices
             {
                 if (_company == null)
                 {
-                    _company = User != null ? SysCompany.FetchByID(User.CompanyId) : _company;
+                    _company = SysCompany.FetchByID(CompanyId);
                 }
                 return _company;
             }
         }
+        public DateTime LastPushDate { get; set; }
 
         public new string CurrentToken
         {
@@ -44,9 +48,9 @@ namespace Eleooo.PushServices
             internal set;
         }
 
-        protected override void OnSessionStarted()
+        protected override void OnSessionStarted( )
         {
-            base.OnSessionStarted();
+            base.OnSessionStarted( );
         }
     }
 }
