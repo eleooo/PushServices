@@ -12,7 +12,7 @@ namespace Eleooo.PushServices.SubCommand
 
     public class Login : SubCommandBase<EleWebSession>
     {
-        private class LoginData
+        private class LoginDTO
         {
             public DateTime Date { get; set; }
             public int UserId { get; set; }
@@ -31,7 +31,7 @@ namespace Eleooo.PushServices.SubCommand
             try
             {
                 session.CurrentToken = requestInfo.Token;
-                var data = JsonConvert.DeserializeObject<LoginData>(requestInfo.Body);
+                var data = JsonConvert.DeserializeObject<LoginDTO>(requestInfo.Body);
                 session.LastPushDate = data.Date;
                 session.UserID = data.UserId;
                 session.CompanyId = data.CompanyId;

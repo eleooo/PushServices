@@ -23,6 +23,26 @@ namespace Eleooo.PushServices
             m_pushTimer = new Timer(PushTimerProcess, null, TimerInterval * 1000, TimerInterval * 1000);
             base.OnStartup( );
         }
+        private SubSonic.StoredProcedure _getOrdersProc;
+        SubSonic.StoredProcedure GetOrdersProc
+        {
+            get
+            {
+                if (_getOrdersProc == null)
+                {
+                    _getOrdersProc = SP_.SpGetOrders(0, null, null, null, null, 0, 0, 0);
+                }
+                return _getOrdersProc;
+            }
+        }
+        public DataTable GetLatestOrderData(EleWebSession session)
+        {
+            var proc = GetOrdersProc;
+            proc.Command.Parameters[0].ParameterValue = session.CompanyId;
+            proc.Command.Parameters[4].ParameterValue = session.LastPushDate;
+            proc.Command.OutputValues.Clear( );
+            return proc.GetDataSet( ).Tables[0];
+        }
 
         private void PushTimerProcess(object state)
         {
@@ -30,22 +50,16 @@ namespace Eleooo.PushServices
             try
             {
                 var sessions = this.GetSessions(session => session.CompanyId > 0);
+                int status = (int)OrderStatus.InProgress;
                 foreach (var session in sessions)
                 {
                     //todo:complete push process
-                    var query = DB.Select(Utilities.GetTableColumns(Order.Schema),
-                                          SysMember.Columns.MemberPhoneNumber,
-                                         SysMember.Columns.MemberFullname)
-                                 .From<Order>( )
-                                 .InnerJoin(SysMember.IdColumn, Order.OrderMemberIDColumn)
-                                 .Where(Order.OrderSellerIDColumn).IsEqualTo(session.CompanyId)
-                                 .And(Order.OrderUpdateOnColumn).IsGreaterThan(session.LastPushDate)
-                                 .OrderDesc(Order.OrderUpdateOnColumn.QualifiedName);
-                    var dt = query.ExecuteDataTable( );
+                    var dt = GetLatestOrderData(session);
                     if (dt.Rows.Count > 0)
                     {
+                        var count = dt.Rows.OfType<DataRow>( ).Count(dr => dr.Field<int>(Order.Columns.OrderStatus) < status);
                         session.LastPushDate = dt.Rows[0].Field<DateTime>(Order.Columns.OrderUpdateOn);
-                        session.Send(OrderPushResult.GetInstance(dt.Rows.Count, dt, true).ToString( ));
+                        session.Send(OrderPushResult.GetInstance(dt.Rows.Count, dt, count > 0).ToString( ));
                     }
                 }
 
