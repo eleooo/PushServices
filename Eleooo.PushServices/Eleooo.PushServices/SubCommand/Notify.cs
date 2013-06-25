@@ -14,6 +14,7 @@ namespace Eleooo.PushServices.SubCommand
         {
             public string toUser { get; set; }
             public string message { get; set; }
+            public string title { get; set; }
 
         }
         public override void ExecuteCommand(EleWebSession session, SubRequestInfo requestInfo)
@@ -24,17 +25,17 @@ namespace Eleooo.PushServices.SubCommand
                 var dto = JsonConvert.DeserializeObject<NotifyDTO>(requestInfo.Body);
                 if (!string.IsNullOrEmpty(dto.toUser) && !string.IsNullOrEmpty(dto.message))
                 {
-                    foreach (var s in session.AppServer.GetAllSessions( ))
-                        SendToUser(s, dto.message);
+                    foreach (var s in session.AppServer.GetAllSessions())
+                        SendToUser(s, dto);
                 }
                 else if (!string.IsNullOrEmpty(dto.message))
-                    SendToUser(session.AppServer.GetAppSessionByID(dto.toUser), dto.message);
+                    SendToUser(session.AppServer.GetAppSessionByID(dto.toUser), dto);
 
             }
         }
-        private static void SendToUser(EleWebSession session,string message)
+        private static void SendToUser(EleWebSession session, NotifyDTO dto)
         {
-            session.Send(CommandResult.GetInstance(0, _Command, message).ToString( ));
+            session.Send(CommandResult.GetInstance(0, _Command, null, dto).ToString());
         }
     }
 }
