@@ -19,6 +19,8 @@ namespace Eleooo.PushServices.SubCommand
             public int CompanyId { get; set; }
             public SubSystem SubSys { get; set; }
             public LoginSystem LoginSys { get; set; }
+            public string Platform{get;set;}
+            public string Version { get; set; }
         }
         public override void ExecuteCommand(EleWebSession session, SubRequestInfo requestInfo)
         {
