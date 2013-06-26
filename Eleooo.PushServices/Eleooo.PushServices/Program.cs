@@ -51,6 +51,7 @@ namespace Eleooo.PushServices
                 }
                 else if (c == 'p')
                 {
+                    Console.WriteLine( );
                     var message = Console.ReadLine( );
                     foreach (var s in appServer.GetAllSessions( ))
                     {
