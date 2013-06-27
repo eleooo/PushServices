@@ -1,40 +1,13 @@
-2013-06-27 00:04:40,450 [2056] DEBUG EleWebPushServer-46104728 - SubProtocol Basic found the commands below:
-Login
-Log
-Notify
-
-2013-06-27 00:04:40,802 [2056] DEBUG EleWebPushServer-46104728 - Listener (0.0.0.0:8080) was started
-2013-06-27 00:10:02,737 [2056] DEBUG EleWebPushServer-46104728 - Listener (0.0.0.0:8080) was stoppped
-2013-06-27 00:22:48,908 [4080] DEBUG EleWebPushServer-46104728 - SubProtocol Basic found the commands below:
-Login
-Log
-Notify
-
-2013-06-27 00:22:48,948 [4080] DEBUG EleWebPushServer-46104728 - Listener (0.0.0.0:8080) was started
-2013-06-27 00:27:28,516 [4080] DEBUG EleWebPushServer-46104728 - Listener (0.0.0.0:8080) was stoppped
-2013-06-27 00:39:07,750 [944] DEBUG EleWebPushServer-46104728 - SubProtocol Basic found the commands below:
-Login
-Log
-Notify
-
-2013-06-27 00:39:07,793 [944] DEBUG EleWebPushServer-46104728 - Listener (0.0.0.0:8080) was started
-2013-06-27 00:57:34,147 [2888] DEBUG EleWebPushServer-46104728 - SubProtocol Basic found the commands below:
+2013-06-28 01:19:52,024 [2848] DEBUG DefaultBootstrap - The server instance elePushServices has been created!
+2013-06-28 01:19:52,102 [2848] DEBUG elePushServices - SubProtocol Basic found the commands below:
 Notify
 Login
 Log
 
-2013-06-27 00:57:34,187 [2888] DEBUG EleWebPushServer-46104728 - Listener (0.0.0.0:8080) was started
-2013-06-27 00:59:55,863 [2888] DEBUG EleWebPushServer-46104728 - Listener (0.0.0.0:8080) was stoppped
-2013-06-27 01:02:16,896 [1892] DEBUG EleWebPushServer-46104728 - SubProtocol Basic found the commands below:
-Notify
-Login
-Log
-
-2013-06-27 01:02:16,936 [1892] DEBUG EleWebPushServer-46104728 - Listener (0.0.0.0:8080) was started
-2013-06-27 01:19:04,774 [1892] DEBUG EleWebPushServer-46104728 - Listener (0.0.0.0:8080) was stoppped
-2013-06-27 01:42:33,261 [328] DEBUG EleWebPushServer-46104728 - SubProtocol Basic found the commands below:
-Notify
-Login
-Log
-
-2013-06-27 01:42:33,306 [328] DEBUG EleWebPushServer-46104728 - Listener (0.0.0.0:8080) was started
+2013-06-28 01:19:52,133 [2848] DEBUG DefaultBootstrap - The server instance elePushServices has been initialized!
+2013-06-28 01:19:55,393 [2848] DEBUG DefaultBootstrap - The PerformanceMonitor has been initialized!
+2013-06-28 01:19:55,393 [2848] DEBUG DefaultBootstrap - The Bootstrap has been initialized!
+2013-06-28 01:19:55,409 [2848] DEBUG elePushServices - Listener (0.0.0.0:8080) was started
+2013-06-28 01:19:55,409 [2848] DEBUG DefaultBootstrap - The PerformanceMonitor has been started!
+2013-06-28 01:21:09,041 [2848] DEBUG elePushServices - Listener (0.0.0.0:8080) was stoppped
+2013-06-28 01:21:09,056 [2848] DEBUG DefaultBootstrap - The PerformanceMonitor has been stoppped!

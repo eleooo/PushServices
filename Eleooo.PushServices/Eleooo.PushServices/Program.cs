@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using SuperSocket.SocketBase;
 using Eleooo.PushServices.SubCommand;
+using SuperSocket.SocketEngine;
 
 namespace Eleooo.PushServices
 {
@@ -11,32 +12,33 @@ namespace Eleooo.PushServices
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Press any key to start the eleooo push services!");
+            Console.WriteLine("Press any key to start the server!");
 
             Console.ReadKey( );
             Console.WriteLine( );
 
-            var appServer = new EleWebPushServer( );
+            var bootstrap = BootstrapFactory.CreateBootstrap( );
 
-            //Setup the appServer
-            if (!appServer.Setup(8080)) //Setup with listening port
+            if (!bootstrap.Initialize( ))
             {
-                Console.WriteLine("Failed to setup!");
+                Console.WriteLine("Failed to initialize!");
                 Console.ReadKey( );
                 return;
             }
 
-            //appServer.NewMessageReceived += new SessionHandler<WebSocketSession, string>(appServer_NewMessageReceived);
+            var result = bootstrap.Start( );
 
+            Console.WriteLine("Start result: {0}!", result);
             Console.WriteLine( );
-
-            //Try to start the appServer
-            if (!appServer.Start( ))
+            if (result == StartResult.Failed)
             {
                 Console.WriteLine("Failed to start!");
                 Console.ReadKey( );
                 return;
             }
+            //appServer.NewMessageReceived += new SessionHandler<WebSocketSession, string>(appServer_NewMessageReceived);
+
+            var appServer = bootstrap.AppServers.First( ) as EleWebPushServer;
 
             Console.WriteLine("The server started successfully, press key 'q' to stop it!");
             char c;
@@ -56,7 +58,8 @@ namespace Eleooo.PushServices
                     foreach (var s in appServer.GetAllSessions( ))
                     {
                         Console.WriteLine("send to:{0}", s.SessionID);
-                        s.Send(CommandResult.GetInstance(0, "Admin", message).ToString( ));
+                        Notify.SendToUser(s, string.Empty, message);
+                        //s.Send(CommandResult.GetInstance(0, "Notify", message).ToString( ));
                     }
                 }
                 Console.WriteLine( );
@@ -64,7 +67,7 @@ namespace Eleooo.PushServices
             }
 
             //Stop the appServer
-            appServer.Stop( );
+            bootstrap.Stop( );
 
             Console.WriteLine( );
             Console.WriteLine("The server was stopped!");

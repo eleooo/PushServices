@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using SuperWebSocket.SubProtocol;
 using Newtonsoft.Json;
+using SuperWebSocket;
 
 namespace Eleooo.PushServices.SubCommand
 {
@@ -35,7 +36,12 @@ namespace Eleooo.PushServices.SubCommand
         }
         private static void SendToUser(EleWebSession session, NotifyDTO dto)
         {
+            dto.toUser = null;
             session.Send(CommandResult.GetInstance(0, _Command, null, dto).ToString());
+        }
+        public static void SendToUser(EleWebSession session, string title, string message)
+        {
+            SendToUser(session, new NotifyDTO { message = message, title = title });
         }
     }
 }

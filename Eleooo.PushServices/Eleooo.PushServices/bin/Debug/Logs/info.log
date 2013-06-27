@@ -1,10 +1,5 @@
-2013-06-27 00:04:40,807 [2056] INFO  EleWebPushServer-46104728 - The server instance EleWebPushServer-46104728 has been started!
-2013-06-27 00:10:02,737 [2056] INFO  EleWebPushServer-46104728 - The server instance EleWebPushServer-46104728 has been stopped!
-2013-06-27 00:22:48,951 [4080] INFO  EleWebPushServer-46104728 - The server instance EleWebPushServer-46104728 has been started!
-2013-06-27 00:27:28,517 [4080] INFO  EleWebPushServer-46104728 - The server instance EleWebPushServer-46104728 has been stopped!
-2013-06-27 00:39:07,796 [944] INFO  EleWebPushServer-46104728 - The server instance EleWebPushServer-46104728 has been started!
-2013-06-27 00:57:34,190 [2888] INFO  EleWebPushServer-46104728 - The server instance EleWebPushServer-46104728 has been started!
-2013-06-27 00:59:55,863 [2888] INFO  EleWebPushServer-46104728 - The server instance EleWebPushServer-46104728 has been stopped!
-2013-06-27 01:02:16,939 [1892] INFO  EleWebPushServer-46104728 - The server instance EleWebPushServer-46104728 has been started!
-2013-06-27 01:19:04,775 [1892] INFO  EleWebPushServer-46104728 - The server instance EleWebPushServer-46104728 has been stopped!
-2013-06-27 01:42:33,310 [328] INFO  EleWebPushServer-46104728 - The server instance EleWebPushServer-46104728 has been started!
+2013-06-28 01:19:55,409 [2848] INFO  elePushServices - The server instance elePushServices has been started!
+2013-06-28 01:20:30,431 [4032] INFO  elePushServices - A new session connected!
+2013-06-28 01:21:09,041 [2848] INFO  elePushServices - The server instance elePushServices has been stopped!
+2013-06-28 01:21:09,056 [3724] INFO  elePushServices - Session: 71d1d5c3-d4f7-4cab-9293-3d6fae189cf5/192.168.0.104:5720
+This session was closed for ServerShutdown!
