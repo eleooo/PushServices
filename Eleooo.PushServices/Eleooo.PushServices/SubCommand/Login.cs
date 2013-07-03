@@ -39,6 +39,7 @@ namespace Eleooo.PushServices.SubCommand
                 session.CompanyId = data.CompanyId;
                 session.SubSys = data.SubSys;
                 session.LoginSys = data.LoginSys;
+                Console.WriteLine("商家ID:{0} 成功登录推送服务器", session.CompanyId);
             }
             catch (Exception ex)
             {

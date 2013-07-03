@@ -58,8 +58,9 @@ namespace Eleooo.PushServices
                     if (dt.Rows.Count > 0)
                     {
                         var count = dt.Rows.OfType<DataRow>( ).Count(dr => dr.Field<int>(Order.Columns.OrderStatus) < status);
-                        session.LastPushDate = dt.Rows[0].Field<DateTime>(Order.Columns.OrderUpdateOn);
+                        session.LastPushDate = dt.Rows[dt.Rows.Count - 1].Field<DateTime>(Order.Columns.OrderUpdateOn);
                         session.Send(OrderPushResult.GetInstance(dt.Rows.Count, dt, count > 0).ToString( ));
+                        Console.WriteLine("成功向商家ID:{0} 推送{1}条订单数据", session.CompanyId,dt.Rows.Count);
                     }
                 }
 
