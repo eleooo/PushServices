@@ -39,7 +39,7 @@ namespace Eleooo.PushServices
             //appServer.NewMessageReceived += new SessionHandler<WebSocketSession, string>(appServer_NewMessageReceived);
 
             var appServer = bootstrap.AppServers.First( ) as EleWebPushServer;
-
+            //appServer.NewMessageReceived += new SessionHandler<EleWebSession, string>(appServer_NewMessageReceived);
             Console.WriteLine("The server started successfully, press key 'q' to stop it!");
             char c;
             while ((c = Console.ReadKey( ).KeyChar) != 'q')
@@ -72,6 +72,11 @@ namespace Eleooo.PushServices
             Console.WriteLine( );
             Console.WriteLine("The server was stopped!");
             Console.ReadKey( );
+        }
+
+        static void appServer_NewMessageReceived(EleWebSession session, string value)
+        {
+            Console.WriteLine("Received:{0} - {1}", session.SessionID, value);
         }
     }
 }

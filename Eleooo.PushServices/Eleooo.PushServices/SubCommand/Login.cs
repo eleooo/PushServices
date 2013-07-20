@@ -24,15 +24,15 @@ namespace Eleooo.PushServices.SubCommand
         }
         public override void ExecuteCommand(EleWebSession session, SubRequestInfo requestInfo)
         {
-            if (string.IsNullOrEmpty(requestInfo.Token))
-            {
-                session.Send(CommandResult.GetInstance(-1, requestInfo.Key, "登录失败.").ToString());
-                session.Close();
-                return;
-            }
+            //if (string.IsNullOrEmpty(requestInfo.Token))
+            //{
+            //    session.Send(CommandResult.GetInstance(-1, requestInfo.Key, "登录失败.").ToString());
+            //    session.Close();
+            //    return;
+            //}
             try
             {
-                session.CurrentToken = requestInfo.Token;
+                //session.CurrentToken = requestInfo.Token;
                 var data = JsonConvert.DeserializeObject<LoginDTO>(requestInfo.Body);
                 session.LastPushDate = data.Date;
                 session.UserID = data.UserId;
